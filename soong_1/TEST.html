@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<title>무제 문서</title>
+<script type="text/javascript">
+<!--
+function checkForm(frm){
+
+  var chkbox = frm['chkbox[]'];
+  var cnt = 0;
+  var job = frm.job.options[frm.job.selectedIndex].text;
+  for (var i = 0 ; i < chkbox.length; i++) {
+    if (chkbox[i].checked) {
+       cnt++;
+    }
+  }
+  if(cnt == 0){
+    window.alert("체크박스를 선택하세요!");
+    return;
+  }
+  document.frmList.action = "receive.php";
+  document.frmList.submit();
+}
+//-->
+</script>
+</head>
+<body>
+<form name="frmList" method="POST" action="javascript:checkForm(document.frmList);">
+<p> 성별</p>
+
+	<input type="radio" name="chk_sex[]" value="남자"checked="true">남자
+	<input type="radio" name="chk_sex[]" value="여자">여자
+	<p></p>
+<p>연령</p>
+	<input type="radio" name="chk_age[]" value="십대"checked="true">10대
+	<input type="radio" name="chk_age[]" value="이십대">20대
+	<input type="radio" name="chk_age[]" value="삼십대">30대
+	<input type="radio" name="chk_age[]" value="사십대">40대
+	<p></p>
+
+  <tr>
+     <td colspan="5" align="right"><input type="submit" name="Submit" value="전송" /></td>
+ </tr>
+</form>
+</body>
+</html>
+
+출처: https://soonrok.tistory.com/108 [순록의 Smart Worl:D]
+
+출처: https://soonrok.tistory.com/108 [순록의 Smart Worl:D]
